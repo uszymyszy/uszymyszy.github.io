@@ -15,78 +15,107 @@ body {
 	background-position: center top;
 	background-attachment: absolute;
 	background-color: #000000;
-	margin-left: 30px;
-	margin-right: auto;
-	margin-top: 0;
-	margin-bottom: 0;
-
-
-	min-width: 800px;
-}
-.menu {
-	position: absolute;
-	left:50%;
-	margin-left:-480px;
-	z-index: 100;
-	top: 270px;
-	width: 171px;
-	height: 141px;
-		-webkit-background-size: 100% 100%;
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-}
-
-.main {
-	position: relative;
-	width: 800px;
-
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 0;
 	margin-bottom: 0;
-	padding-bottom: 30px;
+	/*
+	min-width: 800px;
+	*/
+}
+.menu {
+	position: absolute;
+	left:-15%;
+	margin-left: 20px;
+	/*
+	margin-right: auto;
+	margin-left:-480px;
+	*/
+	z-index: 100;
+	width: 171px;
+	height: 141px;
+	/*
+	top: 270px;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	*/
+}
+
+
+.main {
+/*
+	display: block;
+	
+	height: auto;
+	box-shadow: 0px 0px 35px black;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	margin-bottom: 30px;
+
+
+	width: 800px;
+	*/
+	
+	position: relative;
+	width: 80%;
+	max-width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	margin-bottom: 0;
+	/*padding-bottom: 30px;*/
 	background-color: #060606;
 	color: #ffffff;
 }
+/*
 .main:before,
 .main:after {
 	content: '';
 	position: absolute;
 	top: 0;
-	/*cien*/
+	
 	width: 40px;
 	height: 100%;
 }
 .main:before {
 	right: 100%;
 	background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
-	/* FF3.6+ */
 	background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.3)));
-	/* Chrome,Safari4+ */
 	background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
-	/* Chrome10+,Safari5.1+ */
 	background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
-	/* Opera 11.10+ */
 	background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
-	/* IE10+ */
 	background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
-  /* W3C */
 }
 .main:after {
 	left: 100%;
 	background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
-  /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(0, 0, 0, 0.5)), color-stop(100%, rgba(0, 0, 0, 0)));
-  /* Chrome,Safari4+ */
 	background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
-  /* Chrome10+,Safari5.1+ */
 	background: -o-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
-  /* Opera 11.10+ */
 	background: -ms-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
-  /* IE10+ */
 	background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
-  /* W3C */
 }
+*/
+
+
+.main .slider {
+	width: 80%;
+	/*
+	max-width: 1024px;
+	*/
+	height: auto;
+}
+
+.main .slider img {
+	display: block;
+	width: 100%;
+	height: auto;
+	/*max-height: 229px;*/
+}
+
+/*
 .main .slider {
 	width: 100%;
 	max-height: 229px;
@@ -96,6 +125,7 @@ body {
 	width: 100%;
 	max-height: 229px;
 }
+*/
 .main .copy {
 	font-size: 9px;
 	font-family: 'Verdana', 'Helvetica', 'Arial',  sans-serif;
@@ -122,4 +152,43 @@ body {
 	display: block;
 	width: 100%;
 	height: auto;
+	background-color: yellow;
+	box-shadow: 0px 0px 35px black;
+}
+
+.photosh {
+	display: block;
+	/*width: 800px;*/
+	width: 80%;
+	max-width: 960px;
+	height: auto;
+	box-shadow: 0px 0px 35px black;
+	box-shadow: 0px 0px 35px black;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	margin-bottom: 30px;
+	/*
+	position: relative;
+	padding-bottom: 30px;
+	width: 800px;
+	*/
+}
+
+.photopad {
+	display: block;
+	/*width: 800px;*/
+	width: 80%;
+	max-width: 960px;
+	height: auto;
+	box-shadow: 0px 0px 35px black;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	/*
+	position: relative;
+	padding-bottom: 30px;
+	width: 800px;
+	*/
 }
