@@ -81,7 +81,7 @@ h3
 @media screen and (orientation: portrait) {
   div {
     width: clamp(20px, 99%, 1400px);/*min, preferred, max*/
-		font-size: clamp(3px, 3.4vw, 20px);
+		font-size: clamp(3px, 3.4vw, 60px);
   }
 }
 
