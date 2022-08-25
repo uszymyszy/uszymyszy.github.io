@@ -44,7 +44,7 @@ div
 	/* font-family:Verdana, Geneva, Tahoma, sans-serif; */
 	font-family: 'Open Sans', sans-serif;
 	/* font-size:1.4vw; */
-	font-size: clamp(9px, 1.4vw, 14px);
+	font-size: clamp(2px, 1.4vw, 14px);
 	color: rgb(202, 202, 202);
 	padding-top: 10px;
 	/* padding-right: 10px; */
