@@ -1,114 +1,81 @@
-﻿a:link 
-{
-	color: rgb(255, 208, 0);
+body {
+  width: 90%;
+  /* max-width: 640px; */
+  margin: 0px auto;
+  padding: 2em;
+  box-sizing: border-box;
+  background: #f2e7d9;
+  font-family: "Varela Round", sans-serif;
+  color: #633645;
+  line-height: 1.3;
+}
+body > div {
+  padding: 2em;
+  background: rgba(255, 255, 255, 0.7);
+  border: 10px solid white;
 }
 
-a:visited 
-{
-	color: rgb(197, 151, 0);
+h2, p, ul {
+  padding-bottom: 1em;
 }
 
-a:hover 
-{
-	color: rgb(229, 255, 0);
+h2 {
+  text-align: center;
+  font-size: 2em;
 }
 
-a:active 
+p {
+  font-size: 1.2em;
+}
+
+#midi-data ul img 
 {
-	color: rgb(255, 0, 234);
+  width: 200px;
 }
 
 img 
 {
-	width: 100%;
+  width: 20px;
 	height: auto;
-	box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.1); /*shift, size*/
-	align-items: center;
+	position: absolute;
+  left: 0px;
+  top: 0px;
 }
 
-div 
-{
-	/* border: 1px solid black; */
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	/*
-	width: clamp(20px, 96%, 1400px);/*min, preferred, max*/
-	margin-top: 10px;
-	margin-bottom: 10px;
-	/* margin-right: 3%; */
-	/* margin-left: 3%; */
-	background-color: rgba(60, 60, 60, 0);
-	/* max-width: 1200px; */
-	/* font-family: Georgia, 'Times New Roman', Times, serif; */
-	/* font-family:Verdana, Geneva, Tahoma, sans-serif; */
-	font-family: 'Open Sans', sans-serif;
-	/* font-size:1.4vw; */
-	font-size: clamp(9px, 1.4vw, 14px);
-	color: rgb(202, 202, 202);
-	padding-top: 10px;
-	/* padding-right: 10px; */
-	padding-bottom: 10px;
-	/* padding-left: 10px; */
-	align-items: center;
-	
+
+#midi-data {
+  position: relative;
+  overflow: hidden;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid rgba(133, 71, 122, 0.7);
+}
+#midi-data ul {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  /* padding: 1em; */
+}
+#midi-data ul li {
+  padding: 0.2em 0.2em 0.2em 1em;
+  font-size: 1.6em;
+  font-family: monospace;
+}
+#midi-data ul li:last-child {
+  
+  color: #85477a;
+  animation: flash 0.5s;
+}
+#midi-data ul li:last-child:before {
+  content: "> ";
+  margin-left: -1em;
 }
 
-body 
-{
-  background-color: rgb(60, 60, 60);
-	align-content: center;
-	align-items: center;
-	justify-content: center;
-}
-
-h1
-{
-	color: rgb(255, 255, 255);
-}
-
-h3
-{
-	/* color: rgb(255, 255, 255); */
-	/* padding-bottom: 0px;
-	padding-top: 0px; */
-	margin-top: 10px;
-	margin-bottom: 0em ;
-}
-
-/* For portrait, we want the tool bar on top */
-
-@media screen and (orientation: portrait) {
-  div {
-    width: clamp(20px, 99%, 1400px);/*min, preferred, max*/
-		font-size: clamp(3px, 3.4vw, 60px);
+@keyframes flash {
+  0% {
+    color: #c9b21d;
+  }
+  100% {
+    color: #85477a;
   }
 }
-
-/* For landscape, we want the tool bar stick on the left */
-
-@media screen and (orientation: landscape) {
-  div {
-		width: clamp(20px, 92%, 1400px);/*min, preferred, max*/
-		font-size: clamp(9px, 1.4vw, 14px);
-  }
-}
-
-video 
-{
-	position: fixed;
-	 right: 0;
-	 bottom: 0;
-	 /* min-width: 100%;
-	 min-height: 100%; */
-	 width: 10%;
-	 height: 10%;
-	 z-index:-1;
-	 /*to edit the opacity effect change the percentage below */
-	 /* filter:opacity(5%);  */
-	 /* blur(30px); */
-	 /* filter:; */
-	 /* filter:blur(15px); */
-	 /* transform: translateX(10%) translateY(40%);} */
-}
-
