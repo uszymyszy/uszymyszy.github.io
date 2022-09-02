@@ -80,26 +80,26 @@ function gotMIDImessage(messageData)
 
 
 
-	if (messageData.data[1]==65)
-	{
-		yourImg = document.getElementById('i1');
-	}
-	if (messageData.data[1]==67)
-	{
-		yourImg = document.getElementById('i2');
-	}
-	if (messageData.data[1]==69)
-	{
-		yourImg = document.getElementById('i3');
-	}
+	// if (messageData.data[1]==65)
+	// {
+	// 	yourImg = document.getElementById('i1');
+	// }
+	// if (messageData.data[1]==67)
+	// {
+	// 	yourImg = document.getElementById('i2');
+	// }
+	// if (messageData.data[1]==69)
+	// {
+	// 	yourImg = document.getElementById('i3');
+	// }
 	
 	if(yourImg && yourImg.style)
 	{
 		// yourImg.style.translate (0,0);
 		lastImg.style.zIndex=9;
 		yourImg.style.zIndex=10;
-		yourImg.style.width = 'auto';
 		yourImg.style.height = '100%';
+		yourImg.style.width = 'auto';
 	
 		// lastImg=yourImg;
 	}
