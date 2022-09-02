@@ -1,56 +1,67 @@
 body {
-  width: 100%;
+  width: 90%;
   /* max-width: 640px; */
   margin: 0px auto;
-  padding: 0em;
+  padding: 2em;
   box-sizing: border-box;
-  background: #000000;
+  background: #f2e7d9;
   /* font-family: "Varela Round", sans-serif; */
   color: #633645;
   line-height: 1.3;
 }
 body > div {
-  /* padding: 2em; */
+  padding: 2em;
   background: rgba(255, 255, 255, 0.7);
-  /* border: 10px solid white; */
+  border: 10px solid white;
 }
 
 h2, p, ul {
   padding-bottom: 1em;
 }
 
-/* h2 {
+h2 {
   text-align: center;
   font-size: 2em;
-} */
+}
 
-/* p {
+p {
   font-size: 1.2em;
-} */
+}
 
 #midi-data ul img 
 {
-  width: 100px;
+  width: 200px;
 }
 
 img 
 {
-	/* 972x360 */
 	position: absolute;
-	left: -306px;
-  top: 306px;
-	transform: rotate(-90deg);
+	left: 0px;
+	top: 0px; 
+
+	/* transform: rotate(90deg) translateY(-100%); */
+	
+  transform-origin:top left;
+	transform: rotate(-90deg) translateX(-100%);
+
+	/* height: 100vw; */
+  width: 100vh;
+ height: auto;
+
+  /* width: auto;
+	height: auto; */
+	/* transform-origin:left; */
+	/* transform: rotate(-90deg); */
+	/* left: -306px;
+  top: 306px; */
+	/* transform: rotate(-90deg);*/
 	/* margin-top: auto;
   margin-bottom: auto; */
-	
-	/* height: width; */
-	/* width: height; */
-  /* width:100%; */
 }
 
 
 #midi-data {
-  position: absolute;
+  position: relative;
   overflow: hidden;
   height: 50px;
   background: rgba(255, 255, 255, 0.9);
@@ -63,9 +74,9 @@ img
   /* padding: 1em; */
 }
 #midi-data ul li {
-  /* padding: 0.2em 0.2em 0.2em 1em; */
+  padding: 0.2em 0.2em 0.2em 1em;
   font-size: 1.6em;
-  /* font-family: monospace; */
+  font-family: monospace;
 }
 #midi-data ul li:last-child {
   
@@ -83,5 +94,5 @@ img
   }
   100% {
     color: #85477a;
-  } */
-/* } */
+  }
+} */

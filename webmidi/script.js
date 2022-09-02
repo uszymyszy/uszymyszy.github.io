@@ -53,6 +53,7 @@ function gotMIDImessage(messageData)
 	{
 		lastImg=yourImg;
 
+
 		switch(messageData.data[1])
 		{
 			case 1: yourImg = document.getElementById('i1'); break;
@@ -74,34 +75,26 @@ function gotMIDImessage(messageData)
 			case 17: yourImg = document.getElementById('i17'); break;
 			case 18: yourImg = document.getElementById('i18'); break;
 
+			// case 30: yourImg = document.getElementById('i1'); break;
+			// case 34: yourImg = document.getElementById('i2'); break;
+			// case 31: yourImg = document.getElementById('i3'); break;
+			// case 32: yourImg = document.getElementById('i4'); break;
+			// case 33: yourImg = document.getElementById('i5'); break;
+
 			default:  break;
-				// code block
 		} 
 
-
-
-	// if (messageData.data[1]==65)
-	// {
-	// 	yourImg = document.getElementById('i1');
-	// }
-	// if (messageData.data[1]==67)
-	// {
-	// 	yourImg = document.getElementById('i2');
-	// }
-	// if (messageData.data[1]==69)
-	// {
-	// 	yourImg = document.getElementById('i3');
-	// }
 	
 	if(yourImg && yourImg.style)
 	{
-		// yourImg.style.translate (0,0);
+
 		lastImg.style.zIndex=9;
 		yourImg.style.zIndex=10;
-		yourImg.style.height = '100%';
-		yourImg.style.width = 'auto';
-	
-		// lastImg=yourImg;
+		// yourImg.style.width = '50%';
+		// yourImg.style.height = '100%';
+		// yourImg.style.transform.rotate='-90deg';
+		// yourImg.style.left='0px';
+		// yourImg.style.top='0px';
 	}
 }
 
