@@ -34,12 +34,14 @@ var dataList = document.querySelector('#midi-data ul')
 var lastImg;
 var yourImg;
 
+var ra = document.getElementById('ra');
+
 
 function gotMIDImessage(messageData) 
 {
 	var newItem = document.createElement('li');
 	// var newImg = document.createElement('img');
-
+	// var huj = 
 	newItem.appendChild(document.createTextNode(messageData.data));
 	dataList.appendChild(newItem);
 	// lastImg=yourImg;
@@ -52,7 +54,7 @@ function gotMIDImessage(messageData)
 	if (messageData.data[0]==144)
 	{
 		lastImg=yourImg;
-
+		
 
 		switch(messageData.data[1])
 		{
@@ -75,26 +77,57 @@ function gotMIDImessage(messageData)
 			case 17: yourImg = document.getElementById('i17'); break;
 			case 18: yourImg = document.getElementById('i18'); break;
 
-			// case 30: yourImg = document.getElementById('i1'); break;
-			// case 34: yourImg = document.getElementById('i2'); break;
-			// case 31: yourImg = document.getElementById('i3'); break;
+
+			// case 30:
+			// 	yourImg = document.getElementById('i1');
+			// 	document.getElementById("gr").textContent="newtext";
+			// 	// document.getElementById("p").innerHTML = "New text!"; 
+			// 	break;
+			// case 34: document.getElementById("io").textContent='off'; break;
+			// case 31: document.getElementById("gr").textContent=messageData.data[1]; break;
 			// case 32: yourImg = document.getElementById('i4'); break;
 			// case 33: yourImg = document.getElementById('i5'); break;
 
+			//ramka
+			case 44: ra.style.left='19vh'; ra.style.top='75vh';break;
+			case 45: ra.style.left='19vh'; ra.style.top='50vh';break;
+			case 46: ra.style.left='19vh'; ra.style.top='25vh';break;
+			case 47: ra.style.left='19vh'; ra.style.top='0vh';break;
+			
+			case 48: ra.style.left='0px'; ra.style.top='75vh';break;
+			case 49: ra.style.left='0px'; ra.style.top='50vh';break;
+			case 50: ra.style.left='0px'; ra.style.top='25vh';break;
+			case 51: ra.style.left='0px'; ra.style.top='0vh';break;
+
 			default:  break;
-		} 
+		}
 
-	
-	if(yourImg && yourImg.style)
+		if(yourImg && yourImg.style)
+		{
+			lastImg.style.visibility = 'hidden';
+			yourImg.style.visibility = 'visible';
+			lastImg.style.zIndex=9;
+			yourImg.style.zIndex=10;
+		}
+
+		if (messageData.data[1]<=8)
+		{
+			document.getElementById("gr").textContent=messageData.data[1];
+		}
+
+	}
+	// else
+
+
+if (messageData.data[0]==146)
+{
+	switch(messageData.data[1])
 	{
-
-		lastImg.style.zIndex=9;
-		yourImg.style.zIndex=10;
-		// yourImg.style.width = '50%';
-		// yourImg.style.height = '100%';
-		// yourImg.style.transform.rotate='-90deg';
-		// yourImg.style.left='0px';
-		// yourImg.style.top='0px';
+		case 0: document.getElementById("io").textContent='off'; break;
+		case 1: document.getElementById("io").textContent='on'; break;
+		case 2: document.getElementById("io").textContent='black'; break;
+		case 3: document.getElementById("io").textContent='stop'; break;
+		default:  break;
 	}
 }
 
