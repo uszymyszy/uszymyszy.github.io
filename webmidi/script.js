@@ -53,7 +53,8 @@ function gotMIDImessage(messageData)
 	{
 		lastImg=yourImg;
 
-		switch(messageData.data[1]) {
+		switch(messageData.data[1])
+		{
 			case 1: yourImg = document.getElementById('i1'); break;
 			case 2: yourImg = document.getElementById('i2'); break;
 			case 3: yourImg = document.getElementById('i3'); break;
@@ -79,18 +80,18 @@ function gotMIDImessage(messageData)
 
 
 
-	// if (messageData.data[1]==65)
-	// {
-	// 	yourImg = document.getElementById('i1');
-	// }
-	// if (messageData.data[1]==67)
-	// {
-	// 	yourImg = document.getElementById('i2');
-	// }
-	// if (messageData.data[1]==69)
-	// {
-	// 	yourImg = document.getElementById('i3');
-	// }
+	if (messageData.data[1]==65)
+	{
+		yourImg = document.getElementById('i1');
+	}
+	if (messageData.data[1]==67)
+	{
+		yourImg = document.getElementById('i2');
+	}
+	if (messageData.data[1]==69)
+	{
+		yourImg = document.getElementById('i3');
+	}
 	
 	if(yourImg && yourImg.style)
 	{
