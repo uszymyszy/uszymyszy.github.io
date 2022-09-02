@@ -7,7 +7,8 @@ body {
   background: #000000;
   /* font-family: "Varela Round", sans-serif; */
 	font-family: "stealth57 Regular";
-	src: url("./stealth57.ttf");
+	src: url("./stealth57.ttf") format("ttf");
+	src: url("stealth57.ttf") format("ttf");
 	letter-spacing: 3px;
   color: #26c000;
   line-height: 1.3;
