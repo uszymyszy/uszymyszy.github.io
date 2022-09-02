@@ -98,8 +98,8 @@ function gotMIDImessage(messageData)
 		// yourImg.style.translate (0,0);
 		lastImg.style.zIndex=9;
 		yourImg.style.zIndex=10;
-		yourImg.style.width = '100%';
-		yourImg.style.height = 'auto';
+		yourImg.style.width = 'auto';
+		yourImg.style.height = '100%';
 	
 		// lastImg=yourImg;
 	}
